@@ -1,0 +1,23 @@
+default: &default
+  adapter: mysql2
+  host: 127.0.0.1
+  pool: 5
+  timeout: 5000
+  username: root
+  password: root
+
+development:
+  <<: *default
+  database: team_dashboard_development
+
+test:
+  <<: *default
+  database: team_dashboard_test
+
+staging:
+  <<: *default
+  database: team_dashboard_staging
+
+production:
+  <<: *default
+  database: team_dashboard_production
