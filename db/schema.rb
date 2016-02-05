@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160205191418) do
-
-  create_table "peer_rotations", force: :cascade do |t|
-    t.date     "date"
-    t.integer  "user_id",      limit: 4
-    t.integer  "peer_user_id", limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
+ActiveRecord::Schema.define(version: 20160129211042) do
 
   create_table "teams", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -28,12 +20,11 @@ ActiveRecord::Schema.define(version: 20160205191418) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.string   "email",           limit: 255
-    t.date     "scrum_lead_date"
-    t.integer  "team_id",         limit: 4
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.integer  "team_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "widget_data", force: :cascade do |t|
