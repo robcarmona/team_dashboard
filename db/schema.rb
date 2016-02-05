@@ -29,18 +29,18 @@ ActiveRecord::Schema.define(version: 20160205191418) do
 
   create_table "widget_data", force: :cascade do |t|
     t.integer  "widget_id",  limit: 4
-    t.string   "data",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.text     "data",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "widget_settings", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "widget_id",  limit: 4
     t.boolean  "enabled"
-    t.string   "data",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.text     "data",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "widgets", force: :cascade do |t|

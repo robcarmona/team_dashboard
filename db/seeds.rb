@@ -1,12 +1,12 @@
-Team.create!([
+ruby_team = Team.create!([
   {name: "Ruby Team"}
 ])
 
 User.create!([
-  {name: "Alex Myers", email: "amyers@enspiresoftware.com", team_id: 1},
-  {name: "Eric Fox", email: "efox@enspiresoftware.com", team_id: 1},
-  {name: "Mike Richards", email: "mrichards@enspiresoftware.com", team_id: 1},
-  {name: "Robert Carmona", email: "rcarmona@enspiresoftware.com", team_id: 1}
+  {name: "Alex Myers", email: "amyers@enspiresoftware.com", team_id: Team::RUBY},
+  {name: "Eric Fox", email: "efox@enspiresoftware.com", team_id: Team::RUBY},
+  {name: "Mike Richards", email: "mrichards@enspiresoftware.com", team_id: Team::RUBY},
+  {name: "Robert Carmona", email: "rcarmona@enspiresoftware.com", team_id: Team::RUBY}
 ])
 
 Widget.create!([
@@ -25,8 +25,9 @@ Widget.create!([
 end
 
 # create widget data for each widget
-(1..3).each do |o|
-  WidgetDatum.create!([
-    {widget_id: o, data: ""},
-  ])
-end
+WidgetDatum.create!([
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 1, :reviewer_id => 4}.to_json },
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 3, :reviewer_id => 2}.to_json },
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 4, :reviewer_id => 1}.to_json },
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 2, :reviewer_id => 3}.to_json }
+])
