@@ -4,7 +4,7 @@ class CreateWidgetSettings < ActiveRecord::Migration
       t.references :user
       t.references :widget
       t.boolean :enabled
-      t.string :data
+      t.text :data
       t.timestamps null: false
     end
   end
