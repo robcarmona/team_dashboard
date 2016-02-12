@@ -1,8 +1,6 @@
 require 'rufus-scheduler'
 
-
 peer_rotation = Rufus::Scheduler.singleton
-
 scheduler = Rufus::Scheduler.new(:lockfile => ".rufus-scheduler.lock")
 
 unless scheduler.down?
