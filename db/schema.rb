@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20160205191418) do
   create_table "widgets", force: :cascade do |t|
     t.string   "name",        limit: 255
     t.string   "description", limit: 255
+    t.string   "table",       limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end

@@ -5,7 +5,6 @@ class PeerRotation < WidgetBase
   end
 
   # Get current rotation
-  # TODO: Currently retrieves all from db
   # TODO: Refactor query calls
   # [ { :user => @user, :reviewer => @user2  }, {...} ]
   def self.get_current_rotation
