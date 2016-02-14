@@ -23,3 +23,8 @@ group :development, :test do
   gem 'pry-remote'
   gem 'pry'
 end
+
+# currently deployed to heroku
+group :production do
+  gem 'pg'
+end
