@@ -3,10 +3,10 @@ ruby_team = Team.create!([
 ])
 
 User.create!([
-  {name: "Alex Myers", email: "amyers@enspiresoftware.com", team_id: Team::RUBY},
-  {name: "Eric Fox", email: "efox@enspiresoftware.com", team_id: Team::RUBY},
-  {name: "Mike Richards", email: "mrichards@enspiresoftware.com", team_id: Team::RUBY},
-  {name: "Robert Carmona", email: "rcarmona@enspiresoftware.com", team_id: Team::RUBY}
+  {name: "Alex Myers", email: "alex.myers@enspiresoftware.com", team_id: Team::RUBY},
+  {name: "Eric Fox", email: "eric.fox@enspiresoftware.com", team_id: Team::RUBY},
+  {name: "Mike Richards", email: "michael.richards@enspiresoftware.com", team_id: Team::RUBY},
+  {name: "Robert Carmona", email: "robert.carmona@enspiresoftware.com", team_id: Team::RUBY}
 ])
 
 Widget.create!([
