@@ -29,5 +29,10 @@ WidgetDatum.create!([
   { widget_id: Widget::PEER_ROTATION, data: { :user_id => 1, :reviewer_id => 3}.to_json },
   { widget_id: Widget::PEER_ROTATION, data: { :user_id => 2, :reviewer_id => 4}.to_json },
   { widget_id: Widget::PEER_ROTATION, data: { :user_id => 3, :reviewer_id => 1}.to_json },
-  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 4, :reviewer_id => 2}.to_json }
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 4, :reviewer_id => 2}.to_json },
+  # Week 2
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 1, :reviewer_id => 4 }.to_json, created_at: (DateTime.now + 1.minute) },
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 2, :reviewer_id => 1,}.to_json, created_at: (DateTime.now + 1.minute) },
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 3, :reviewer_id => 2,}.to_json, created_at: (DateTime.now + 1.minute) },
+  { widget_id: Widget::PEER_ROTATION, data: { :user_id => 4, :reviewer_id => 3 }.to_json, created_at: (DateTime.now + 1.minute) }
 ])
