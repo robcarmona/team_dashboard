@@ -1,13 +1,15 @@
 ruby_team = Team.create!([
-  {name: "Ruby Team"}
+  { id: Team::RUBY_INFRA, name: "Ruby Team - Infrastructure" },
+  { id: Team::RUBY_PROD, name: "Ruby Team - Product Dev" },
+  { id: Team::DOT_NET, name: "Microsfot .NET" }
 ])
 
-User.create!([
-  {name: "Alex Myers", email: "alex.myers@enspiresoftware.com", team_id: Team::RUBY},
-  {name: "Eric Fox", email: "eric.fox@enspiresoftware.com", team_id: Team::RUBY},
-  {name: "Mike Richards", email: "michael.richards@enspiresoftware.com", team_id: Team::RUBY},
-  {name: "Robert Carmona", email: "robert.carmona@enspiresoftware.com", team_id: Team::RUBY}
-])
+# User.create!([
+#   {name: "Alex Myers", email: "alex.myers@enspiresoftware.com", team_id: Team::RUBY},
+#   {name: "Eric Fox", email: "eric.fox@enspiresoftware.com", team_id: Team::RUBY},
+#   {name: "Mike Richards", email: "michael.richards@enspiresoftware.com", team_id: Team::RUBY},
+#   {name: "Robert Carmona", email: "robert.carmona@enspiresoftware.com", team_id: Team::RUBY}
+# ])
 
 Widget.create!([
   {id: Widget::PEER_ROTATION, table: "widget_data", name: "Peer Rotation", description: "Randomly sets the peer review buddy of each person of the team. Scheduled to automatically change each Monday."},

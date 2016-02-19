@@ -15,16 +15,19 @@ ActiveRecord::Schema.define(version: 20160205191418) do
 
   create_table "teams", force: :cascade do |t|
     t.string   "name",       limit: 255
+    t.string   "logo_url",   limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "email",      limit: 255
-    t.integer  "team_id",    limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "name",            limit: 255
+    t.string   "email",           limit: 255
+    t.integer  "team_id",         limit: 4
+    t.string   "github_token",    limit: 255
+    t.string   "github_username", limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "widget_data", force: :cascade do |t|

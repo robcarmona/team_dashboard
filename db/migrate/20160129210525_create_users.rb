@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.references :team
+      t.string :github_token
+      t.string :github_username
       t.timestamps null: false
     end
   end
