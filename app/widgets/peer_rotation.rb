@@ -9,7 +9,7 @@ class PeerRotation < WidgetBase
   # [ { :user => @user, :reviewer => @user2  }, {...} ]
   def self.get_current_rotation
     rotation_data = []
-    users = User.where(team_id: Team::RUBY)
+    users = User.where(team_id: Team::RUBY_PROD)
 
     user_store = Hash.new
     begin_date = DateTime.now.beginning_of_week - 1.day

@@ -12,7 +12,9 @@
 
       <div class="panel-body">
         <%= form_for(:session, url: login_path, :html => { :class => 'form-horizontal' }) do |f| %>
-
+        <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
         <div class="input-group">
           <span class="input-group-addon">
             <i class="glyphicon glyphicon-user"></i>

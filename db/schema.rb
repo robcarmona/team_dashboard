@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160205191418) do
     t.integer  "team_id",         limit: 4
     t.string   "github_token",    limit: 255
     t.string   "github_username", limit: 255
+    t.integer  "github_id",       limit: 4
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
